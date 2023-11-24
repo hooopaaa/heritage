@@ -1,0 +1,60 @@
+
+# Коллекционируем Журнальчики
+
+![](https://spbnokcenter.ru/gallery_gen/75ce6c9dd1a6542bfac46bcae94c9423_1863x527.7247983871.jpg)
+
+---
+
+### *Выбери имеющиеся выпуски*:
+
+
+<ul id="checkbox-list">
+    <li><input type="checkbox" id="item1"> <label for="item1">Выпуск 88</label></li>
+    <li><input type="checkbox" id="item2"> <label for="item2">Выпуск 89</label></li>
+    <li><input type="checkbox" id="item3"> <label for="item3">Выпуск 90</label></li>
+    <li><input type="checkbox" id="item4"> <label for="item3">Выпуск 91</label></li>
+    <li><input type="checkbox" id="item5"> <label for="item3">Выпуск 92</label></li>
+    <li><input type="checkbox" id="item6"> <label for="item3">Выпуск 93</label></li>
+    <li><input type="checkbox" id="item7"> <label for="item3">Выпуск 94</label></li>
+    <li><input type="checkbox" id="item8"> <label for="item3">Выпуск 95</label></li>
+    <li><input type="checkbox" id="item9"> <label for="item3">Выпуск 96</label></li>
+    <li><input type="checkbox" id="item10"> <label for="item3">Выпуск 97</label></li>
+    <li><input type="checkbox" id="item11"> <label for="item3">Выпуск 98</label></li>
+    <li><input type="checkbox" id="item12"> <label for="item3">Выпуск 99</label></li>
+    <li><input type="checkbox" id="item13"> <label for="item3">Выпуск 100</label></li>
+    <li><input type="checkbox" id="item14"> <label for="item3">Выпуск 101</label></li>
+    <li><input type="checkbox" id="item15"> <label for="item3">Выпуск 102</label></li>
+    <li><input type="checkbox" id="item16"> <label for="item3">Выпуск 103</label></li>
+    <li><input type="checkbox" id="item17"> <label for="item3">Выпуск 104</label></li>
+    <li><input type="checkbox" id="item18"> <label for="item3">Выпуск 105</label></li>
+</ul>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const checkboxList = document.getElementById('checkbox-list');
+
+        checkboxList.addEventListener('change', function(event) {
+            const checkboxId = event.target.id;
+            const isChecked = event.target.checked;
+
+            localStorage.setItem(checkboxId, isChecked);
+        });
+
+        Array.from(checkboxList.getElementsByTagName('input')).forEach(function(checkbox) {
+            const checkboxId = checkbox.id;
+            const isChecked = JSON.parse(localStorage.getItem(checkboxId));
+
+            if (isChecked !== null) {
+                checkbox.checked = isChecked;
+            }
+        });
+    });
+</script>
+
+---
+
+>
+> [Тут полная карта](https://yandex.ru/maps/?um=constructor%3Acd9bfb113e01577dc48a54b4729be403e882be23ae85036fc02a12cbbe1c59d0&source=constructorLink)
+>
+
+![](https://mobimg.b-cdn.net/v3/fetch/0a/0ad62a9ea82e45f848373e3a20158802.jpeg)
